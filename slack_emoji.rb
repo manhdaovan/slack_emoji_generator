@@ -11,6 +11,7 @@ end
 options = {
   emoji_size: '60x60',
   bg_color: 'transparent',
+  font: 'ArialUnicode',
   font_size: 15,
   text_color: 'pink',
   output: nil
@@ -25,6 +26,10 @@ begin
 
     opts.on('-b', '--background=BACKGROUND', 'Emoji background color') do |v|
       options.merge!(bg_color: v.to_s)
+    end
+
+    opts.on('-z', '--font=FONT', 'Emoji text font') do |v|
+      options.merge!(font: v.to_s)
     end
 
     opts.on('-f', '--fontsize=FONTSIZE', 'Emoji font size') do |v|

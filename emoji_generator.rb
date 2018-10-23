@@ -33,7 +33,8 @@ class EmojiGenerator
     cmd = '$(which convert)'
     cmd += " -size #{@options[:emoji_size]}"
     cmd += " xc:#{@options[:bg_color]}"
-    cmd += " -pointsize #{@options[:font_size]} -font ArialUnicode"
+    cmd += " -font #{@options[:font]}"
+    cmd += " -pointsize #{@options[:font_size]}"
     cmd += " -fill #{@options[:text_color]}"
     cmd += " -draw @#{ASSET_FILE_NAME}"
     cmd += " ./outputs/#{@options[:output]}"
