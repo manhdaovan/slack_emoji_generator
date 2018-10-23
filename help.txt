@@ -7,6 +7,7 @@ Options:
   -o: Emoji output file. Default: input_text.png
   -s: Emoji size (horizontal x vertical) in px. Default: 60x60
   -t: Emoji text color. Default: pink
+  -z: Emoji text font. Default: ArialUnicode
   -h: Print help message
 
 Example:
