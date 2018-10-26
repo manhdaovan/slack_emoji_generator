@@ -36,6 +36,9 @@ Sometime one emoji is better than lines of chatting.
 ## Usage
 
 ```
+# Clone source code for first time
+$git clone https://github.com/manhdaovan/slack_emoji_generator.git
+$cd /path/to/slack_emoji_generator
 $ruby slack_emoji.rb [-bfostzh] "text"
 
 Options:
