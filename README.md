@@ -10,6 +10,19 @@ Sometime one emoji is better than lines of chatting.
 
 ## Install
 
+### With Docker
+
+```sh
+  # clone this repo
+  git clone git@github.com:manhdaovan/slack_emoji_generator.git /path/to/slack_emoji_generator
+  cd /path/to/slack_emoji_generator
+
+  # build the image
+  docker build -t slack_emoji:latest .
+```
+
+### Without Docker
+
 - Install [ImageMagick](https://www.imagemagick.org/script/download.php)
 - Check supporting font by:
   - `$convert -list font` or
@@ -34,6 +47,16 @@ Sometime one emoji is better than lines of chatting.
     ```
 
 ## Usage
+
+### With Docker
+
+```
+docker run --env GENERATE_ON_DOCKER=true -it -v ./outputs:/app/outputs slack_emoji ruby slack_emoji.rb -z IPAGothic -t black -b white "私も私も"
+```
+
+Then open the emoji file(s) under `./outputs`
+
+### Without Docker
 
 ```
 # Clone source code for first time

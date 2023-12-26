@@ -54,6 +54,9 @@ class EmojiGenerator
   def display_success_message
     file_path = "#{Dir.pwd}/outputs/#{@options[:output]}"
     puts 'Output succeeded', file_path
+    return if ENV['GENERATE_ON_DOCKER']
+
+    # open file if generated without docker
     `open #{file_path}`
   end
 
